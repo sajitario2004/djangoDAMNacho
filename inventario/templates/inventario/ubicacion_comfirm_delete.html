@@ -1,0 +1,32 @@
+
+{% extends "inventario/base.html" %}
+{% load static %}
+
+
+{% block content %}
+<table class="table table-striped">
+  <thead>
+   <tr><th colspan=2><h1>Tipo</h1></th></tr>
+  </thead>
+  <body>
+    <tr>
+      <td>Nombre</td>
+      <td>{{ object.nombre }}</td>
+    </tr>
+    <tr>
+      <td>Descripcion</td>
+      <td>{{ object.descripcion }}</td>
+    </tr>
+  </body>
+</table>
+<form method="post">
+   {% csrf_token %}
+   <input class="btn btn-danger" type="submit" value="Confirmar borrado">
+ </form>
+{% endblock %}
+
+
+{% comment %}
+vim:ts=2:expandtab:ai
+$Id: ubicacion_confirm_delete.html 20 2025-11-27 21:10:24Z vic@gssi.es $
+{% endcomment %}

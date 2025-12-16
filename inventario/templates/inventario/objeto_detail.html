@@ -1,0 +1,40 @@
+
+{% extends "inventario/base.html" %}
+{% load static %}
+
+
+{% block content %}
+<table class="table table-striped">
+  <thead>
+   <tr><th colspan=2><h1>Objeto</h1></th></tr>
+  </thead>
+  <body>
+    <tr>
+      <td>Tipo</td>
+      <td>{{ object.tipo }}</td>
+    </tr>
+    <tr>
+      <td>Etiqueta</td>
+      <td>{{ object.etiqueta }}</td>
+    </tr>
+    <tr>
+      <td>Nombre</td>
+      <td>{{ object.nombre }}</td>
+    </tr>
+    <tr>
+      <td>Imagen</td>
+      <td>{{ object.imagen }}</td>
+    </tr>
+    <tr>
+      <td>Descripcion</td>
+      <td>{{ object.descripcion }}</td>
+    </tr>
+  </body>
+</table>
+{% endblock %}
+
+
+{% comment %}
+vim:ts=2:expandtab:ai
+$Id: objeto_detail.html 13 2025-07-21 21:45:56Z vic@gssi.es $
+{% endcomment %}
